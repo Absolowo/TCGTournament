@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Lideres{% endblock %}
+{% block body %}
+    <h1>Ficha del lider</h1>
+    {% if leader %}
+        {{include ('partials/datos_leader.html.twig', { 'leader': leader })}}
+    {% else %}
+        <p>Lider no encontrado</p>
+    {% endif %}
+{% endblock %}

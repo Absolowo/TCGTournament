@@ -1,0 +1,9 @@
+<ul>
+    <li><strong>{{ participante.nombre}}</strong></li>
+    <li><strong>JID: </strong>{{ participante.jid}}</li>
+    {% if participante.leader %}
+    <li><strong>Leader: </strong>{{ participante.leader.nombre}}</li>
+    <li><strong>Leader Code: </strong>{{ participante.leader.codigo}}</li>
+    {% endif %}
+    <li><strong>Score: </strong>{{ participante.score}}</li>
+</ul>

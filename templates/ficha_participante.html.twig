@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Participantes{% endblock %}
+{% block body %}
+    <h1>Ficha del participante</h1>
+    {% if participante %}
+        {{include ('partials/datos_participante.html.twig', { 'participante': participante })}}
+    {% else %}
+        <p>Participante no encontrado</p>
+    {% endif %}
+{% endblock %}

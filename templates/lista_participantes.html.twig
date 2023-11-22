@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}Participantes{% endblock %}
+{% block body %}
+    <h1>Lista de participantes</h1>
+    {% if participantes %}
+        {% for participante in participantes %}
+            {{include ('partials/datos_participante.html.twig', { 'participante': participante })}}
+        {% endfor %}
+    {% else %}
+        <p>Participante no encontrado</p>
+    {% endif %}
+{% endblock %}
